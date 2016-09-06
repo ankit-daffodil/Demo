@@ -1,0 +1,32 @@
+<div class="col-xs-12">
+    <div class="row text-center header">
+        <h1>Demo Project</h1>
+    </div>
+    <div class="row">
+        <div class=" col-xs-12 col-sm-2 padding" ng-if="isShowLeftMenu">
+            <div class="col-xs-12 col-sm-9 padding">
+                <div id="mySidenav" class="sidenav" ng-style="styleNavLeft">
+                    <a ui-sref='table.detail({"route":table})' ng-click="onItemClick(table)" ng-class="{'active': selectedItem.name == table.name}" ng-repeat="table in employee.tables">{{table.name}}</a>
+                </div>
+            </div>
+            <!-- <div class='col-xs-12 col-sm-3' ng-hide='showNavLeft' ng-click="isShowNavLeft()"><i class="glyphicon glyphicon-play"></i></div> -->
+        </div>
+        <div ng-class="changeClass()">
+            <div class='col-xs-12 col-sm-1 padding icon-font' ng-show="isShowLeftMenu" ng-click="isShowNavLeft()"><i class="glyphicon glyphicon-arrow-left"></i></div>
+            <div class='col-xs-12 col-sm-1 padding icon-font' ng-hide="isShowLeftMenu" ng-click="isShowNavLeft()"><i class="glyphicon glyphicon-arrow-right"></i></div>
+            <div ui-view class="col-xs-12 col-sm-10"></div>
+            <div class='col-xs-12 col-sm-1 padding icon-font' ng-show="isShowRightMenu" ng-click="isShowNavRight()"><i class="glyphicon glyphicon-arrow-right float-right"></i></div>
+            <div class='col-xs-12 col-sm-1 padding icon-font' ng-hide="isShowRightMenu" ng-click="isShowNavRight()"><i class="glyphicon glyphicon-arrow-left float-right"></i></div>
+        </div>
+        <div class=" col-xs-12 col-sm-2 padding" ng-if="isShowRightMenu">
+            <div class="col-xs-12 col-sm-9">
+                <div id="mySidenav1" class="sidenav" ng-style="styleNavRight">
+                    <a href="#">Favourite</a>
+                    <a href="#">Profile</a>
+                    <a href="#">Settings</a>
+                    <a href="#">Account</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

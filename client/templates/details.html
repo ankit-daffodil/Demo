@@ -1,0 +1,31 @@
+<div class="col-sm-12">
+    <!-- <table>
+        <tr>
+            <th ng-repeat="key in employee.keys" ng-if="key !='_id'">{{key}}</th>
+        </tr>
+
+        <tr ng-repeat="employe in employee.detail">
+            <td ng-repeat="(key, value) in employe" ng-if="key !='_id'">
+               {{value}}
+            </td>
+        </tr>
+    </table> -->
+
+
+    <div class="col-sm-12 row text-center title">
+        {{title}}
+    </div>
+    <div class="table">
+        <div class="row1 header" >
+            <div class="cell" ng-repeat="key in employee.keys" ng-if="key !='_id'">
+                {{key}}
+            </div>
+        </div>
+        <div class="row1" ng-repeat="employe in employee.detail">
+            <div class="cell" ng-repeat="(key, value) in employe" ng-if="key !='_id'">
+                {{value}}
+            </div>
+        </div>
+    </div>
+</div>
+</div>

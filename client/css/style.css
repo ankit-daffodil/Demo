@@ -1,0 +1,113 @@
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    background-color: #4b5d67;
+    overflow-x: hidden;
+    padding-top: 10px;
+    transition: 0.5s;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 16px;
+    text-decoration: none;
+    font-size: 16px;
+    color: white;
+    display: block;
+    transition: 0.3s
+}
+
+.sidenav a:hover,
+.offcanvas a:focus {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#main {
+    transition: margin-left .5s;
+    padding: 20px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+    .sidenav a {
+        font-size: 18px;
+    }
+}
+
+table {
+    border: 1px solid #666;
+    width: 100%;
+}
+
+th {
+    background: #f8f8f8;
+    font-weight: bold;
+    padding: 2px;
+}
+
+.header {
+    background: #4b5d67;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.table {
+    margin: 0 0 40px 0px;
+    width: 100%;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    display: table;
+}
+
+.row1:nth-of-type(odd) {
+    background: #e9e9e9;
+}
+
+.row1.header {
+    font-weight: 900;
+    color: #ffffff;
+    background: #4b5d67;
+    text-transform: capitalize;
+}
+
+.row1 {
+    display: table-row;
+    background: #f6f6f6;
+}
+
+.cell {
+    padding: 6px 12px;
+    display: table-cell;
+}
+
+.title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.padding {
+    padding:0px;
+}
+
+.float-right {
+    float: right;
+}
+
+.active {
+    background-color: black;
+}
+
+.icon-font {
+    font-size: 25px;
+}
