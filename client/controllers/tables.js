@@ -50,14 +50,19 @@ app.controller('tablesController', function($scope,dataService,$timeout,$state) 
         },500);
     }
 
-    var url = "tables/get";
     $scope.employee = {};
+    // we have set default data for tables. If data not get from db
+    $scope.employee["tables"] = [{ "_id": "57c94f8b87faef1d0a93028d", "name": "Employee Detail", "route": "employeeDetail" }, { "_id": "57c94fa287faef1d0a93028e", "name": "Employee Qualification", "route": "employeeQualification" }, { "_id": "57c94fbb87faef1d0a93028f", "name": "Contact Information", "route": "contactInformation" }, { "_id": "57c94fce87faef1d0a930290", "name": "Employee Address", "route": "employeeAddress" }];
+
+    var url = "tables/get";
     dataService.getDetailData(url,function(error,result){
     	if(error) {
 
     	} else {
-    		$state.go("table.detail");
-			$scope.employee["tables"] = result.data;
+    		$state.go("table.detail"); 
+            if(result.data.length) {
+    			$scope.employee["tables"] = result.data;            
+            }
 			$scope.selectedItem = result.data[0];    		
     	}
     })
