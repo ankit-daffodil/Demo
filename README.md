@@ -9,7 +9,7 @@ Open terminal and go to project folder and Run below command for install modules
 ```
 npm install
 ```
-Run below command for run the test server (This test server will run on test database)
+Run below command for run the test server (This server will use test database)
 
 ```
 npm run test-server
