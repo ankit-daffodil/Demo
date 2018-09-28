@@ -1,30 +1,13 @@
 # Project Title
   
-	Demo Project
+	test
 
-## Instructions for run project 
+## Instructions for run test cases 
 
-Open terminal and go to project folder and Run command ./mongoRestore.sh (Please ensure the dump folder parallel to mongoRestore.sh file)
-
-```
-./mongoRestore.sh
-```
-
-Run command on terminal cd server 
-
+Open terminal and go to project folder and Run below commands (please ensure the postgres and node js install on your system)
 
 ```
-cd server
+npm install
+npm run test-server
+npm test
 ```
-
-Run command npm start for start the server.
-
-```
-npm start
-```
-
-Open browser and type http://localhost:3000/#/detail 
-
-```
-http://localhost:3000/#/detail
-``` 
